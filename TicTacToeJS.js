@@ -80,7 +80,7 @@ const checkWinner = () => {
       if (pos1Val === pos2Val && pos2Val === pos3Val) {
         showWinner(pos1Val);
         isWinner = true;
-        return; // stop checking further
+        return;
       }
     }
   }
