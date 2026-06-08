@@ -3,6 +3,9 @@ let resetBtn = document.querySelector("#reset-btn");
 let newGameBtn = document.querySelector("#new-btn");
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
+let drawMsg = document.querySelector(".msg-container-2");
+let newGameBtnTow = document.querySelector("#new-btn-2");
+
 
 let turnO = true;
 
@@ -21,8 +24,8 @@ const restGame = () => {
     turnO = true;
     enableBoxes();
     msgContainer.classList.add("hide");
+    drawMsg.classList.add("hide-2");
 }
-
 
 boxes.forEach((box) => {
   box.addEventListener("click", () => {
@@ -59,6 +62,12 @@ const showWinner = (winner) => {
     disableBoxes();
 }
 
+const showDraw = () => {
+    msg.innerText = "Game Draw..";
+    drawMsg.classList.remove("hide-2");
+    disableBoxes();
+}
+
 const checkWinner = () => {
   for (pattern of winPatterns) {
     
@@ -76,4 +85,6 @@ const checkWinner = () => {
 };
 
 newGameBtn.addEventListener("click", restGame);
+newGameBtnTow.addEventListener("click", restGame);
 resetBtn.addEventListener("click", restGame);
+
