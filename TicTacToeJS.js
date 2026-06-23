@@ -3,6 +3,7 @@ let resetBtn = document.querySelector("#reset-btn");
 let newGameBtn = document.querySelector("#new-btn");
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
+let msgDrw = document.querySelector("#msg-2");
 let drawMsg = document.querySelector(".msg-container-2");
 let newGameBtnTow = document.querySelector("#new-btn-2");
 
@@ -63,7 +64,7 @@ const showWinner = (winner) => {
 }
 
 const showDraw = () => {
-    msg.innerText = "Game Draw..";
+    msgDrw.innerText = "Game Draw..";
     drawMsg.classList.remove("hide-2");
     disableBoxes();
 }
